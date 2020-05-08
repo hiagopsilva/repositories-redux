@@ -4,7 +4,8 @@
   "private": true,
   "husky": {
     "hooks": {
-      "pre-commit": "echo 'teste'"
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+      "prepare-commit-msg": "exec < /dev/tty && git cz --hook || true"
     }
   },
   "dependencies": {
@@ -42,6 +43,8 @@
     ]
   },
   "devDependencies": {
+    "@commitlint/cli": "^8.3.5",
+    "@commitlint/config-conventional": "^8.3.4",
     "husky": "^4.2.5"
   }
 }
