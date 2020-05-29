@@ -28,7 +28,7 @@ class RepositoryList extends Component<Props> {
 
     return (
       <ul>
-        {repositories.map(repo => repo.name)}
+        {repositories.map(repo => <li>{repo.name}</li>)}
       </ul>
     );
   }
